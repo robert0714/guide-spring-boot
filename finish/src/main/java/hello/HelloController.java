@@ -23,7 +23,7 @@ public class HelloController {
 			 
 			Socket socket = new Socket();
 			socket.connect(new InetSocketAddress("google.com", 80));
-			des =socket.getLocalAddress()!=null ?socket.getLocalAddress().toString() : "" ;
+			des =socket.getLocalAddress()!=null ?socket.getLocalAddress().toString() +"/////////"+InetAddress.getLocalHost().getHostName(): "" ;
 			 
 		} catch (Exception e) {
 			e.printStackTrace();
